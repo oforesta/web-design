@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav {
+  background-color: #ffff;
+  color: #0000;
+  width: 100%;
+  padding: 15px 30px;
+  border-bottom: 2px solid #F96E2A;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  gap: 100px
+}
+
+.header_registration-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+li a {
+  border: 1px solid #F96E2A;
+  padding: 10px 20px;
+}
+
+.register-btn {
+  background-color: #ffff; /* Green */
+  border: 1px solid #000;
+  color: #000;
+  margin: 5px;
+  padding: 5px 20px;
+  
+}
+
+main {
+
+  padding: 140px;
+}
+
+.main-title {
+  color: #F96E2A;
+  font-size: 46px;
+}
+
+.m {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.hero-section {
+  margin-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("http://127.0.0.1:32768/16.17.42/images/main/u13.jpg");
+  background-size: 1400px;
+  //width: 800px;
+  height: 800px;
+  
+}
+
+.hero-headings {
+  color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 200px 50px;
+}
+
+.hero-heading-main {
+  font-size: 32px;
+  
+}
+
+.hero-heading-submain {
+  padding-top: 200px;
+  font-size: 24px;
+}
+
+section {
+  padding-top: 100px;
+}
+
+section h1 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.news-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-card-1 {
+  height: 400px;
+  width: 650px;
+}
+
+.news-card-2 {
+  height: 260px;
+  width: 400px;
+}
+
+.food-and-destinations {
+  
+  display: flex;
+  //justify-content: space-between;
+
+}
+
+.food-section-news {
+  width: 50%;
+  background-color: #3393;
+}
+
+.destinations-section-news {
+  width: 50%;
+  background-color: #D4EBF8;
+}
+
+
+/*
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav_links li {
+  position: relative;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav_links a:hover {
+  color: #024FFF;
+}
+
+.nav_menu_btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
