@@ -81,7 +81,7 @@ main {
 
 .hero-section {
   margin-top: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("http://127.0.0.1:32768/16.17.42/images/main/u13.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/background-image.jpg");
   background-size: 1400px;
   //width: 800px;
   height: 800px;
@@ -142,12 +142,25 @@ section h1 {
 
 .food-section-news {
   width: 50%;
-  background-color: #3393;
+  //background-color: #3393;
 }
 
 .destinations-section-news {
   width: 50%;
-  background-color: #D4EBF8;
+  
+}
+
+.food-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.food-card {
+  padding: 30px;
+  text-align: center;
+  
 }
 
 
