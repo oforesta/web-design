@@ -1,3 +1,10 @@
+:root {
+  --main-color: #F96E2A;
+  --dark-color: #1a1a1a;
+  --light-color: #fefefe;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +12,21 @@
 }
 
 
-nav {
-  background-color: #ffff;
-  color: #0000;
+header {
+  background-color: var(--light-color);
+  color: var(--dark-color);
   width: 100%;
   padding: 15px 30px;
-  border-bottom: 2px solid #F96E2A;
-  position: fixed;
+  border-bottom: 2px solid var(--main-color);
+  //position: fixed;
   top: 0;
   z-index: 1000;
 }
+
+ul {
+  list-style-type: none;
+}
+
 
 .nav_header {
   display: flex;
@@ -27,14 +39,12 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
-  gap: 100px
+  gap: 100px;
 }
 
 .header_registration-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1;
 }
 
 .right-header {
@@ -45,30 +55,30 @@ nav {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: var(--dark-color);
 }
 
 li a {
-  border: 1px solid #F96E2A;
+  border: 1px solid var(--main-color);
   padding: 10px 20px;
 }
 
 .register-btn {
-  background-color: #ffff; /* Green */
-  border: 1px solid #000;
-  color: #000;
+  background-color: #ffff; 
+  border: 1px solid var(--dark-color);
   margin: 5px;
   padding: 5px 20px;
   
 }
 
 main {
+  padding: 40px 120px;
+  border-bottom: 2px solid var(--main-color);
 
-  padding: 140px;
 }
 
 .main-title {
-  color: #F96E2A;
+  color: var(--main-color);
   font-size: 46px;
 }
 
@@ -76,25 +86,47 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .hero-section {
   margin-top: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./images/background-image.jpg");
+  background-image: linear-gradient(rgba(0,0,0 , 0.5), rgba(0, 0 ,0 , 0.8)), url("./images/background-image.jpg");
   background-size: 1400px;
-  //width: 800px;
   height: 800px;
   
 }
 
 .hero-headings {
-  color: #fefefe;
+  color: var(--light-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   padding: 200px 50px;
+}
+
+.search {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  padding: 5px 10px 5px 10px;
+  border-radius: 2px;
+}
+
+.search input {
+  border: none;
+  height: 30px;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search img {
+  height: 20px;
+  width: 20px;
 }
 
 .hero-heading-main {
@@ -134,15 +166,13 @@ section h1 {
 }
 
 .food-and-destinations {
-  
-  display: flex;
-  //justify-content: space-between;
-
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10px;
 }
 
 .food-section-news {
   width: 50%;
-  //background-color: #3393;
 }
 
 .destinations-section-news {
@@ -160,40 +190,532 @@ section h1 {
 .food-card {
   padding: 30px;
   text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.subscription {
+  width: 50%;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid var(--main-color);
+}
+
+.subscription-mobile {
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid var(--main-color);
+}
+
+.subscription h2 {
+  color: var(--main-color);
+  padding-bottom: 20px;
+}
+
+.subscription .paragraphs {
+  width: 70%;
+}
+
+.subscription p {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.subscription-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-text: center;
+  justify-content: flex-end;
+  gap: 20px;
+  
+}
+
+.subscription-footer h2 {
+  font-size: 24px;
+  padding: 10px 40px 10px 40px;
+}
+
+.subscription-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px 40px 10px 40px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+footer {
+  height: 400px;
+  padding-top: 100px;
+}
+
+footer {
+  height: 400px;
+  padding-top: 100px;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px;
+}
+
+.footer-links img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.students {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  gap: 50px;
+}
+
+.mobile-version {
+  display: none;
+}
+
+header .mobile-header {
+  display: none;
+}
+
+.mobile-header-1 {
+  display: none;
+}
+
+.mobile-search {
+  display: none;
+}
+
+.mobile-header-2 {
+  display: none;
+}
+
+.subscription-mobile {
+  display: none;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+
+  main {
+    padding: 40px 120px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .header-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .header_social-links a img {
+    height: 40px;
+  }
+
+  .m h1 {
+    font-size: 32px;
+  }
+
+  .news-card-1 {
+    width: 500px;
+  }
+
+  .news-card-2 {
+    width: 260px
+  }
+
+  .news-section .news-card-3 {
+    display: none;
+  }
+
+  .food-section-news {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .food-and-destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .mobile-version {
+    display: none;
+  }
+
+  header .mobile-header {
+    display: none;
+  }
+
+  .mobile-header-1 {
+    display: none;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+
+  .mobile-header-2 {
+    display: none;
+  }
+
+  .subscription-mobile {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  main {
+    padding: 40px 80px;
+  }
+
+  section {
+    padding: 40px 80px 40px 80px;
+  }
+
+  .header-links {
+    display: flex;
+    gap: 5px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .header_social-links a img {
+    height: 32px;
+  }
+
+  .m h1 {
+    font-size: 32px;
+  }
+
+  .news-card-1 {
+    width: 500px;
+  }
+
+  .news-card-2 {
+    width: 260px
+  }
+
+  .news-section .news-card-3 {
+    display: none;
+  }
+
+  .food-section-news {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .food-and-destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-version {
+    display: none;
+  }
+
+  header .mobile-header {
+    display: none;
+  }
+
+  .mobile-header-1 {
+    display: none;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+
+  .mobile-header-2 {
+    display: none;
+  }
+
+  .subscription-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  main {
+    padding: 40px 0;
+  }
+
+  section  {
+    width: 100%;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .header_social-links {
+    display: none
+  }
+
+  .header_registration-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .m h1 {
+    font-size: 24px;
+  }
+
+  .news-card-1 {
+    width: 360px;
+  }
+
+  .new-card-1 img {
+    width: 360px;
+
+  }
+
+  .news-card-2 {
+    width: 220px
+  }
+
+  .news-section .news-card-3 {
+    display: none;
+  }
+
+  .food-section-news {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 280px;
+  }
+
+  .food-and-destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-version {
+    display: none;
+  }
+
+  .nav-header {
+    display: block;
+  }
+
+  header .mobile-header {
+    display: none;
+  }
+
+  .mobile-header-1 {
+    display: none;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+
+  .mobile-header-2 {
+    display: none;
+  }
+
+  .subscription-mobile {
+    display: none;
+  }
   
 }
 
 
-/*
+/*все другое*/
+@media (max-width: 767px) {
+  
+  main {
+    display: none;
+  }
 
-.nav_links {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+  .logo img {
+    height: 40px;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .header_social-links {
+    display: none
+  }
+
+  .header_registration-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .m h1 {
+    font-size: 20px;
+  }
+
+  .hero-section  {
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+  }
+
+  .mobile-version {
+    display: block;
+  }
+/*????*/
+  .desktop-header {
+    display: none;
+  }
+
+  header .mobile-header {
+    display: block;
+  }
+
+  .mobile-header-1 {
+    display: block;
+  }
+
+  .mobile-search {
+    display: block;
+  }
+
+  .mobile-header-2 {
+    display: block;
+  }
+
+  .mobile-news-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+  }
+  .mobile-card {
+    height: 240px;
+  }
+
+  .mobile-card img {
+    height: 180px;
+  }
+
+  aside img {
+    height: 700px;
+  }
+  .mobile-card-b {
+    padding-top: 40px;
+  }
+  .mobile-version img {
+    width: 100%;
+  }
+
+  .mobile-header-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  
+  .mobile-header-2 {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .mobile-version {
+    padding: 60px;
+  }
+  
+  .mobile-search {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #efefef;
+  }
+  
+  .mobile-search input {
+    border: none;
+    height: 30px;
+    background-color: #efefef;
+  }
+  
+  .mobile-search input:focus {
+    outline: none;
+  }
+  
+  .mobile-search img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .mobile-header-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-header-2 a {
+    padding: 10px 30px 10px 30px;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+  }
+
+  .mobile-header-2 {
+    padding: -30px;
+  }
+
+  .mobile-header-2 a {
+    padding: 5px;
+  }
+
+  footer {
+    padding: 60px;
+    font-size: 12px;
+  }
+
+  footer a {
+    font-size: 8px;
+  }
+
+  .footer-links {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-card-b {
+    padding-bottom: 30px;
+  }
+
+  .subscription-mobile {
+    display: block;
+  }
 }
-
-.nav_links li {
-  position: relative;
-}
-
-.nav_links a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.nav_links a:hover {
-  color: #024FFF;
-}
-
-.nav_menu_btn {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
